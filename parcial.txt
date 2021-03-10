@@ -1,0 +1,41 @@
+
+/**
+* empleado
+*/
+public class empleado {
+
+  String nombre;
+  int sueldoMensual;
+  byte antiguedad;
+  private int documentoIdentidad;
+
+  public int valorPago (int sueldoMensual, int antiguedad) {
+
+    int porcentaje, sueldoFinal;
+    
+    if (antiguedad <= 5) {
+      
+      porcentaje = (sueldoMensual * 10) / 100;
+
+      sueldoFinal = porcentaje + sueldoMensual;
+    	
+    } else if (antiguedad >= 10) {
+    	
+      porcentaje = (sueldoMensual * 15) / 100;
+
+      sueldoFinal = porcentaje + sueldoMensual;
+
+    } else {
+
+      porcentaje = (sueldoMensual * 20) / 100;
+
+      sueldoFinal = porcentaje + sueldoMensual;
+
+    }
+
+    return sueldoFinal;
+  }
+
+  int sueldoBonificado = valorPago(2800000, 11);
+
+}
